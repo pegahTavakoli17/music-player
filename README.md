@@ -1,4 +1,5 @@
 # music-player
+![1](https://github.com/pegahTavakoli17/music-player/assets/127181529/1fc35225-2234-41b6-9675-efbffe147b48)
 -  https://pegahtavakoli17.github.io/music-player/
 -  Developed by Pegah Tavakoli
 -  Created - 2023
