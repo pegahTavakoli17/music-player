@@ -1,0 +1,112 @@
+
+.main-box{
+    width: 400px;
+    height:600px ;
+}
+.track-pic{
+    box-shadow: 0px 10px 10px rgb(199, 198, 198);
+    position: center;
+    background-size: cover;
+}
+.track-name{
+    font-size: 2.5rem;
+}
+.track-artist{
+    font-size: 1.2rem;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+.slider-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.seek-slider,.volume-slider{
+    appearance: none;
+    -webkit-appearance:none;
+    -moz-appearance: none;
+    height: 8px;
+    background-color: rgb(199, 199, 241);
+}
+.seek-slider::-webkit-slider-thumb,
+.volume-slider::-webkit-slider-thumb{
+    -webkit-appearance:none;
+    -moz-webkit-appearance:none;
+    appearance: none;
+    width: 15px;
+    height:15px;
+    border-radius: 50%;
+    background-color: white !important;
+    border:1px solid blue !important;
+    cursor: pointer;
+}
+.rotate{
+    animation: rotation 12s infinite linear;
+}
+@keyframes rotation{
+    from{
+        transform :rotate(0deg)
+    }
+    to{
+        transform: rotate(359deg);
+    }
+}
+.loader{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.stroke .loader{
+    background-color: aliceblue;
+    height: 150%;
+    width: 10px;
+    border-radius: 50px;
+    margin: 0 50px;
+    animation: waveAnime 1.4s infinite linear ;
+
+}
+@keyframes waveAnime {
+    50%{
+        height: 20%;
+        background: rgb(103, 103, 156);
+    }
+    100%{
+height: 100%;
+    }
+}
+.stroke :nth-child(1){
+    animation-delay: 0;
+}
+.stroke :nth-child(2){
+    animation-delay: 0.3s;
+}
+.stroke :nth-child(3){
+    animation-delay: 0.6s;
+}
+.stroke :nth-child(4){
+    animation-delay: 0.9s;
+}
+.stroke :nth-child(5){
+    animation-delay: 0.6s;
+}
+.stroke :nth-child(6){
+    animation-delay: 0.3s;
+}
+.stroke :nth-child(){
+    animation-delay: 0;
+}
+.activeIcon{
+color:rgb(46, 46, 46);
+}
+.volume-slider {
+    background-color: blue;
+  }
