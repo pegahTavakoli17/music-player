@@ -9,7 +9,6 @@ let total_duration = document.querySelector(".total-duration");
 let seek_slider = document.querySelector(".seek-slider");
 let volume_slider = document.querySelector(".volume-slider");
 let playpause_btn = document.querySelector(".playpause-track");
-let wave = document.getElementById("wave");
 let random_icon = document.querySelector(".fa-random");
 let repeat_icon = document.querySelector(".fa-repeat");
 let isRandom = false;
@@ -106,17 +105,16 @@ function pauseRandom() {
   random_icon.classList.remove("activeIcon");
   random_icon.classList.add("text-white");
 }
+
 function repeatTrack() {
   if (isRepeated) {
     isRepeated = false;
-    repeat_icon.classList.remove("text-white");
-    repeat_icon.classList.add("activeIcon");
-    loadTrack(track_index); // Pass track_index instead of current_index
-    playTrack();
-  } else if (!isRepeated) {
-    isRepeated = true;
-    repeat_icon.classList.add("text-white");
     repeat_icon.classList.remove("activeIcon");
+    repeat_icon.classList.add("text-white");
+  } else {
+    isRepeated = true;
+    repeat_icon.classList.add("activeIcon");
+    repeat_icon.classList.remove("text-white");
   }
 }
 function playpauseTrack() {
@@ -126,7 +124,6 @@ function playTrack() {
   current_track.play();
   isPlaying = true;
   track_pic.classList.add("rotate");
-  wave.classList.add("loader");
   playpause_btn.innerHTML =
     '<i class="fas fa-pause-circle fa-5x text-white"></i>';
   seek_slider.style.color = blue;
@@ -135,7 +132,6 @@ function pauseTrack() {
   current_track.pause();
   isPlaying = false;
   track_pic.classList.remove("rotate");
-  wave.classList.remove("loader");
   playpause_btn.innerHTML =
     '<i class="fas fa-play-circle fa-5x text-white"></i>';
   seek_slider.style.background =
