@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>music player</title>
+    
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/index-2d9457d8.css">
+  </head>
+  <body>
+    <div class="h-[93vh] flex justify-center items-center flex-col mt-3">
+      <div
+        class="border main-box"
+        style="box-shadow: rgb(199, 198, 198) 0px 18px 20px"
+      >
+        <div class="flex flex-col items-center justify-center">
+          <div class="mt-3 text-white now-playing">playing x from y</div>
+          <div class="rounded-full border h-[200px] w-[200px] track-pic"></div>
+          <h3 class="text-white track-name">track name</h3>
+          <span class="text-white track-artist">artist</span>
+        </div>
+        <div class="slider-container">
+          <div class="p-2 text-white current-time">00:00</div>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            class="seek-slider w-[60%]"
+            onchange="seekTo()"
+          />
+          <div class="p-2 text-white total-duration">00:00</div>
+        </div>
+        <div class="slider-container">
+          <i class="p-2 text-white fas fa-volume-down"></i>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="100"
+            class="volume-slider w-[30%]"
+            onchange="setVolume()"
+          />
+          <i class="p-2 text-white fas fa-volume-up"></i>
+        </div>
+        <div class="buttons">
+          <div class="random-track" onclick="randomTrack()">
+            <i class="text-white fas fa-random fa-2x"></i>
+          </div>
+          <div class="prev-track" onclick="prevTrack()">
+            <i class="text-white fas fa-step-backward fa-2x"></i>
+          </div>
+          <div class="playpause-track" onclick="playpauseTrack()">
+            <i class="text-white fas fa-play-circle fa-5x"></i>
+          </div>
+          <div class="next-track" onclick="nextTrack()">
+            <i class="text-white fas fa-step-forward fa-2x"></i>
+          </div>
+          <div class="repeat-track" onclick="repeatTrack()">
+            <i class="text-white fas fa-repeat fa-2x"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js" defer></script>
+  </body>
+</html>
